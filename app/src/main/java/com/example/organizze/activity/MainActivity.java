@@ -1,9 +1,11 @@
-package com.example.organizze;
+package com.example.organizze.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.organizze.R;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
@@ -45,9 +47,23 @@ public class MainActivity extends IntroActivity {
         this.addSlide(new FragmentSlide.Builder()
                 .background(R.color.colorPrimary)
                 .fragment(R.layout.intro_4)
+                .build()
+        );
+
+        this.addSlide(new FragmentSlide.Builder()
+                .background(R.color.colorPrimary)
+                .fragment(R.layout.intro_cadastro)
                 .canGoBackward(true)
                 .canGoForward(false)
                 .build()
         );
+    }
+
+    public void btnEntrar(View view){
+//        startActivity(this,);
+    }
+
+    public void btnCadastrar(View view){
+
     }
 }
