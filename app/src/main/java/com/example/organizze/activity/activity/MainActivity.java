@@ -1,6 +1,4 @@
-package com.example.organizze.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.organizze.activity.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

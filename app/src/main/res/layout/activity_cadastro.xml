@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CadastroActivity">
+    tools:context=".activity.activity.CadastroActivity">
 
     <TextView
         android:id="@+id/textView5"
@@ -14,14 +14,14 @@
         android:text="Crie sua conta grátis"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editNome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -29,16 +29,17 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:drawableLeft="@drawable/ic_pessoa_24"
+        android:drawablePadding="8px"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/editEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -48,16 +49,17 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="16dp"
         android:drawableLeft="@drawable/ic_email_24"
+        android:drawablePadding="8px"
         android:ems="10"
         android:hint="Email "
         android:inputType="textWebEmailAddress|textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintBottom_toTopOf="@+id/editSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editNome" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -65,16 +67,17 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:drawableLeft="@drawable/ic_lock_24"
+        android:drawablePadding="8px"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPersonName|textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCadastrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -83,11 +86,13 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
         android:text="Cadastrar"
+        android:textColor="@color/colorFont"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
 
     <TextView
         android:id="@+id/textView6"
@@ -97,6 +102,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
