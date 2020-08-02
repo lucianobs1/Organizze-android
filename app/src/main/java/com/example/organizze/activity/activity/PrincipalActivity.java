@@ -1,5 +1,6 @@
 package com.example.organizze.activity.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,10 +33,10 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     public void adicionarReceita(View v){
-
+        startActivity(new Intent(this, ReceitasActivity.class));
     }
 
     public void adicionarDespesa(View v){
-
+        startActivity(new Intent(this, DespesasActivity.class));
     }
 }
