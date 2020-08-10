@@ -5,6 +5,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 
 public class Usuario {
+
     private String idUsuario;
     private String nome;
     private String email;
@@ -13,34 +14,16 @@ public class Usuario {
     private Double despesaTotal = 0.00;
 
     public Usuario() {
-
     }
 
     public void Salvar(){
         DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
-        firebase
-                .child("usuarios")
+        firebase.child("usuarios")
                 .child(this.idUsuario)
-                .setValue(this);
+                .setValue(this); //Salva o objeto usuario completo (menos os exclude)
     }
 
-    public Double getReceitaTotal() {
-        return receitaTotal;
-    }
-
-    public void setReceitaTotal(Double receitaTotal) {
-        this.receitaTotal = receitaTotal;
-    }
-
-    public Double getDespesaTotal() {
-        return despesaTotal;
-    }
-
-    public void setDespesaTotal(Double despesaTotal) {
-        this.despesaTotal = despesaTotal;
-    }
-
-    @Exclude
+    @Exclude //Não preciso desse id salvo no firebase
     public String getIdUsuario() {
         return idUsuario;
     }
@@ -65,12 +48,28 @@ public class Usuario {
         this.email = email;
     }
 
-    @Exclude
+    @Exclude //Não preciso da senha salva no firebase
     public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Double getReceitaTotal() {
+        return receitaTotal;
+    }
+
+    public void setReceitaTotal(Double receitaTotal) {
+        this.receitaTotal = receitaTotal;
+    }
+
+    public Double getDespesaTotal() {
+        return despesaTotal;
+    }
+
+    public void setDespesaTotal(Double despesaTotal) {
+        this.despesaTotal = despesaTotal;
     }
 }

@@ -108,11 +108,13 @@
         android:layout_marginRight="178dp"
         android:layout_marginBottom="144dp"
         android:clickable="true"
+        android:focusable="true"
         android:foregroundGravity="center|center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         app:srcCompat="@drawable/ic_baseline_add_24"
-        android:focusable="true" />
+        android:onClick="salvarDespesa"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
