@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -71,6 +72,8 @@ public class DespesasActivity extends AppCompatActivity {
                 atualizarDespesa(despesaAtualizada);
 
                 movimentacao.Salvar(data);
+
+               finish();
             }
         }
         catch(Exception e){

@@ -25,4 +25,5 @@ public class ConfiguracaoFirebase {
 
         return autenticacao;
     }
+
 }

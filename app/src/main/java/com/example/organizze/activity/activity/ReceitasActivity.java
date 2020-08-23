@@ -3,6 +3,7 @@ package com.example.organizze.activity.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -51,6 +52,7 @@ public class ReceitasActivity extends AppCompatActivity {
     }
 
     public void salvarReceita(View view){
+
         if(validarCamposReceita()){
 
             movimentacao = new Movimentacao();
@@ -68,6 +70,9 @@ public class ReceitasActivity extends AppCompatActivity {
             atualizarReceita(receitaAtualizada);
 
             movimentacao.Salvar(data);
+
+           finish();
+
         }
     }
 
